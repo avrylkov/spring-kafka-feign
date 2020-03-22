@@ -1,0 +1,11 @@
+spring:
+  kafka:
+    bootstrap-servers:
+      - 192.168.98.100:32777
+      #- localhost:9092
+    consumer:
+      group-id: myGroup
+---
+spring:
+  application:
+    name: consumer-service

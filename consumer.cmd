@@ -1,0 +1,12 @@
+G:\kafka2.4\bin\kafka-console-consumer.bat --bootstrap-server localhost:9092 ^
+--topic test ^
+--isolation-level=read_committed ^
+--formatter kafka.tools.DefaultMessageFormatter ^
+--property print.key=true ^
+--property print.value=true ^
+--property key.deserialzer=org.apache.kafka.common.serialization.StringDeserializer ^
+--property value.deserializer=org.apache.kafka.common.serialization.StringDeserializer ^
+--property enable.auto.commit=true ^
+--property auto.commit.interval.ms=3000 ^
+--property group.id=myGroup ^
+--property client.id=client01

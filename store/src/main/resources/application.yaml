@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: store-service
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: HR
+    password: 1
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        default_batch_fetch_size: 100
+        id.sequence.increment_size_mismatch_strategy: FIX
+        globally_quoted_identifiers: false
+        hbm2ddl:
+          auto: none
+server:
+  port: 8085
